@@ -1,0 +1,35 @@
+.group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  color: #999;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input.filled ~ label {
+  top: -15px;
+  font-size: 14px;
+  color: #5264ae;
+}
